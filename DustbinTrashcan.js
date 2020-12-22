@@ -17,7 +17,7 @@ class Check{
         var pos=this.body.position;
         push();
         translate(pos.x,pos.y);
-      rectMode(CENTER);
+      imageMode(CENTER);
       fill(255);
       image(this.image,-90,0, this.width, this.height);
       pop();
