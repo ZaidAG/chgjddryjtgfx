@@ -19,10 +19,10 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	 paperCuts=new Paper(100,670,70);
-	 boxCuts=new Check(600,670,150,20);
-	 boxCguts=new Check20(675,670,20,300);
-	 boxCnuts=new Check20(525,670,20,300);
+	 paperCuts=new Paper(100,670,100);
+	 boxCuts=new Check(700,670,160,900);
+	 boxCguts=new Check20(705,670,20,800);
+	 boxCnuts=new Check20(505,670,20,800);
 	 ground=new Ground(0,700,1700,50);
 
 	Engine.run(engine);
@@ -33,16 +33,16 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background("yellow");
+  paperCuts.display();
   boxCuts.display();
   boxCguts.display();
   boxCnuts.display();
   ground.display();
-  paperCuts.display();
   
 }
 function keyPressed(){
 	if(keyCode===UP_ARROW){
-		Matter.Body.applyForce(paperCuts.body,paperCuts.body.position,{x:55,y:-65});
+		Matter.Body.applyForce(paperCuts.body,paperCuts.body.position,{x:1005,y:-2535});
 	}
 }
 
