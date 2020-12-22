@@ -2,7 +2,6 @@ class Check{
     constructor(x, y, width, height) {
        var options = {
         isStatic:true,
-        resititution:0
     }
     this.body=Bodies.rectangle(x,y,width,height,options);
     this.width=width;
@@ -17,9 +16,9 @@ class Check{
         var pos=this.body.position;
         push();
         translate(pos.x,pos.y);
-      imageMode(CENTER);
-      fill(255);
-      image(this.image,-90,0, this.width, this.height);
+        imageMode(CENTER);
+        fill(255);
+        image(this.image,-90,0, this.width, this.height);
       pop();
     }
     }
